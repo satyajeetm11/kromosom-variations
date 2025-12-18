@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kromosom AI - Editorial Variation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #F5F1ED;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 85vh;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            align-items: center;
+            gap: 80px;
+        }
+        
+        .hero-content h1 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 56px;
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            letter-spacing: -0.01em;
+        }
+        
+        .hero-content p {
+            font-size: 18px;
+            color: #4a4a4a;
+            margin-bottom: 32px;
+            line-height: 1.7;
+            max-width: 540px;
+        }
+        
+        .trust-badge {
+            font-size: 14px;
+            color: #1B4D3E;
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+        
+        .btn-primary {
+            background: #1B4D3E;
+            color: white;
+            padding: 16px 40px;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .btn-primary:hover {
+            background: #143b2f;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #1B4D3E;
+            padding: 16px 40px;
+            border: none;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: underline;
+            margin-left: 16px;
+        }
+        
+        /* Hero Illustration */
+        .hero-visual {
+            background: linear-gradient(135deg, #1B4D3E 0%, #2d6d54 100%);
+            height: 500px;
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-visual::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                repeating-linear-gradient(45deg, 
+                    transparent, 
+                    transparent 10px, 
+                    rgba(245, 241, 237, 0.03) 10px, 
+                    rgba(245, 241, 237, 0.03) 20px);
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background: #F5F1ED;
+        }
+        
+        .features-header {
+            border-top: 2px solid #1B4D3E;
+            padding-top: 40px;
+            margin-bottom: 80px;
+        }
+        
+        .features h2 {
+            font-family: Georgia, 'Times New Roman', serif;
+            text-align: center;
+            font-size: 48px;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 32px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 24px;
+            color: #1B4D3E;
+            font-size: 32px;
+        }
+        
+        .feature-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+        }
+        
+        .feature-card p {
+            font-size: 15px;
+            color: #4a4a4a;
+            line-height: 1.6;
+        }
+        
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .hero-content h1 { font-size: 40px; }
+            .features-grid { 
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+        }
+        
+        @media (max-width: 568px) {
+            .features-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container" style="display: contents;">
+            <div class="hero-content">
+                <h1>DeFi Trading That Actually Works</h1>
+                <p>Boringly reliable AI trading. No hype. No hidden fees. Just consistent, transparent automation for retail traders.</p>
+                
+                <div class="trust-badge">
+                    Non-custodial. Audited. Transparent.
+                </div>
+                
+                <div>
+                    <button class="btn-primary">Start Trading</button>
+                    <button class="btn-secondary">How Kromosom works</button>
+                </div>
+            </div>
+            
+            <div class="hero-visual"></div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-header">
+                <h2>Simple automation. Real results.</h2>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>24/7 Automated Trading</h3>
+                    <p>Your AI agent monitors DeFi markets around the clock, executing trades when opportunities match your strategy.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔐</div>
+                    <h3>You Control Your Assets</h3>
+                    <p>Kromosom never holds your crypto. All trades execute directly from your wallet. Complete custody, zero platform risk.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📫</div>
+                    <h3>Live Trade Monitoring</h3>
+                    <p>See every transaction as it happens. Track profits, losses, and AI decisions in a straightforward dashboard.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">✓</div>
+                    <h3>Customizable Safety Limits</h3>
+                    <p>Define maximum trade amounts, acceptable slippage, and stop-loss rules. Your AI respects every boundary you set.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
