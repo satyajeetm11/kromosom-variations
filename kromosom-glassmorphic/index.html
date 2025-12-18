@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kromosom AI - Glassmorphic Variation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #ffffff;
+            color: #000000;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 90vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 80px;
+            position: relative;
+        }
+        
+        .hero-content h1 {
+            font-size: 80px;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 24px;
+            letter-spacing: -0.03em;
+        }
+        
+        .hero-content p {
+            font-size: 24px;
+            margin-bottom: 32px;
+            font-weight: 500;
+        }
+        
+        .trust-badge {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+        
+        .btn-primary {
+            background: #000000;
+            color: white;
+            padding: 20px 48px;
+            border-radius: 50px;
+            border: none;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .btn-primary:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Glassmorphic Shapes */
+        .glass-container {
+            position: relative;
+            height: 600px;
+        }
+        
+        .glass-shape {
+            position: absolute;
+            border-radius: 48px;
+            backdrop-filter: blur(20px);
+            animation: floatGlass 15s ease-in-out infinite;
+        }
+        
+        .glass-main {
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, 
+                rgba(139, 92, 246, 0.3) 0%, 
+                rgba(6, 182, 212, 0.3) 100%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 
+                0 8px 32px rgba(139, 92, 246, 0.2),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+        }
+        
+        .glass-small-1 {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, 
+                rgba(6, 182, 212, 0.4) 0%, 
+                rgba(16, 185, 129, 0.4) 100%);
+            top: 10%;
+            right: 10%;
+            animation-delay: 2s;
+            box-shadow: 
+                0 8px 32px rgba(6, 182, 212, 0.2),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+        }
+        
+        .glass-small-2 {
+            width: 180px;
+            height: 180px;
+            background: linear-gradient(135deg, 
+                rgba(236, 72, 153, 0.3) 0%, 
+                rgba(139, 92, 246, 0.3) 100%);
+            bottom: 15%;
+            left: 5%;
+            animation-delay: 4s;
+            box-shadow: 
+                0 8px 32px rgba(236, 72, 153, 0.2),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+        }
+        
+        @keyframes floatGlass {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(20px, -30px) rotate(5deg); }
+            66% { transform: translate(-15px, 20px) rotate(-3deg); }
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 120px 0;
+            background: linear-gradient(180deg, 
+                rgba(139, 92, 246, 0.05) 0%, 
+                rgba(6, 182, 212, 0.05) 100%);
+        }
+        
+        .features h2 {
+            text-align: center;
+            font-size: 64px;
+            font-weight: 900;
+            margin-bottom: 80px;
+            letter-spacing: -0.03em;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+        
+        .feature-card {
+            padding: 48px;
+            border-radius: 32px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, 
+                rgba(139, 92, 246, 0.1) 0%, 
+                rgba(6, 182, 212, 0.1) 100%);
+            z-index: -1;
+        }
+        
+        .feature-card h3 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        
+        .feature-card p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .hero-content h1 { font-size: 48px; }
+            .glass-container { height: 400px; }
+            .glass-main { width: 300px; height: 300px; }
+            .features-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container" style="display: contents;">
+            <div class="hero-content">
+                <h1>Change DeFi Trading</h1>
+                <p>AI that trades. You that profits. Zero complexity.</p>
+                
+                <div class="trust-badge">
+                    Non-custodial • Always in control
+                </div>
+                
+                <button class="btn-primary">Start Trading</button>
+            </div>
+            
+            <div class="glass-container">
+                <div class="glass-shape glass-main"></div>
+                <div class="glass-shape glass-small-1"></div>
+                <div class="glass-shape glass-small-2"></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Everything you need</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Always Trading</h3>
+                    <p>Your personal AI agent never stops searching for the best opportunities across DeFi. It trades when conditions are perfect.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Your Wallet, Your Rules</h3>
+                    <p>Zero custody. Zero deposits. Kromosom connects to your wallet and executes trades directly. You're always in charge.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Total Visibility</h3>
+                    <p>Every single trade is tracked and displayed instantly. Know exactly what your AI is doing at all times.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Protected by Design</h3>
+                    <p>Set stop-loss limits, max trade sizes, and risk thresholds. Your AI operates within your comfort zone, period.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
