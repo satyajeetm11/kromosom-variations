@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kromosom AI - Premium Variation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #F5F1ED;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 72px;
+            font-weight: 400;
+            margin-bottom: 24px;
+            letter-spacing: 0.02em;
+        }
+        
+        .hero-subheadline {
+            font-size: 18px;
+            color: #4a4a4a;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .sparkle {
+            color: #C9A868;
+        }
+        
+        .ratings {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 40px;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .rating-item {
+            text-align: center;
+        }
+        
+        .rating-score {
+            font-size: 48px;
+            font-weight: 700;
+            color: #C9A868;
+        }
+        
+        .stars {
+            color: #C9A868;
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+        
+        .trust-badges {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            padding: 8px 16px;
+            background: white;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #666;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: #2a2a2a;
+            color: white;
+            padding: 18px 48px;
+            border-radius: 12px;
+            border: none;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .btn-primary:hover {
+            background: #1a1a1a;
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #2a2a2a;
+            padding: 18px 48px;
+            border-radius: 12px;
+            border: 1px solid #e0e0e0;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background: #F5F1ED;
+        }
+        
+        .features h2 {
+            font-family: Georgia, 'Times New Roman', serif;
+            text-align: center;
+            font-size: 56px;
+            font-weight: 400;
+            margin-bottom: 16px;
+            letter-spacing: 0.01em;
+        }
+        
+        .features-subheadline {
+            text-align: center;
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 80px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 48px;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            position: relative;
+        }
+        
+        .feature-eyebrow {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #C9A868;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        
+        .feature-card h3 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #1a1a1a;
+        }
+        
+        .feature-card p {
+            font-size: 16px;
+            color: #4a4a4a;
+            line-height: 1.7;
+        }
+        
+        .feature-icon {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            font-size: 24px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 40px; }
+            .rating-score { font-size: 36px; }
+            .features-grid { grid-template-columns: 1fr; }
+            .features h2 { font-size: 36px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Your AI Trading Partner <span class="sparkle">✨</span></h1>
+            
+            <div class="hero-subheadline">
+                <span>Enjoy 100% automated trading</span>
+                <span>♦</span>
+                <span>Non-custodial by design</span>
+                <span>♦</span>
+                <span>Trusted by retail traders</span>
+            </div>
+            
+            <div class="ratings">
+                <div class="rating-item">
+                    <div class="rating-score">4.8</div>
+                    <div class="stars">★★★★★</div>
+                </div>
+            </div>
+            
+            <div class="trust-badges">
+                <span class="badge">AI-powered</span>
+                <span class="badge">Fully transparent</span>
+                <span class="badge">You control your keys</span>
+            </div>
+            
+            <div class="cta-buttons">
+                <button class="btn-primary">Start Trading</button>
+                <button class="btn-secondary">Watch How It Works</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Pick your trading advantage</h2>
+            <p class="features-subheadline">Kromosom AI handles complexity. You enjoy returns.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🤖</span>
+                    <div class="feature-eyebrow">01. Intelligence</div>
+                    <h3>Trade Automatically</h3>
+                    <p>Your AI agent finds the best DeFi opportunities across multiple chains and executes trades for you, 24/7. No manual work required.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🛡️</span>
+                    <div class="feature-eyebrow">02. Security</div>
+                    <h3>Your Keys, Always</h3>
+                    <p>Never deposit funds. Kromosom connects to your wallet and trades on your behalf without ever holding your crypto.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">📊</span>
+                    <div class="feature-eyebrow">03. Visibility</div>
+                    <h3>See Every Move</h3>
+                    <p>Live dashboard shows every trade, profit, and AI decision. Compare your performance and track growth in real time with complete transparency.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">⚙️</span>
+                    <div class="feature-eyebrow">04. Control</div>
+                    <h3>Set Your Limits</h3>
+                    <p>Define risk levels, maximum trade sizes, and stop-loss rules. Your AI operates within boundaries you're comfortable with—nothing more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
